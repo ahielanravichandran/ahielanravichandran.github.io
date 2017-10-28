@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html>
+  <title>Team Portfolio</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Meet the Team">
+    <meta name="language" content="english" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="target-densitydpi=device-dpi" name="viewport">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+      .content-inline {
+        display: flex;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+      }
+      .horizontal-line {
+        width: 40%;
+        margin-top: 14px;
+        opacity: 0.1;
+        border: solid 1px #000000;
+      }
+      .header-content {
+        height: 240px;
+        opacity: 0.85;
+	      background-image: linear-gradient(279deg, #764ba2, #667eea);
+	      box-shadow: 0 2px 45px 20px rgba(0, 0, 0, 0.11);
+      }
+      .header-content p {
+        text-align: center;
+        color: #ffffff;
+        font-family: Merriweather;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+      }
+      .meet-the-team {
+        padding-top: 69px;
+        font-size: 56px;
+        font-weight: bold;
+        letter-spacing: 0.1px;
+      }
+      .passionate-about-tec {
+      	font-size: 18px;
+        font-weight: lighter;
+      	letter-spacing: 0;
+      }
+      .developer-section {
+        display: flex;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        justify-content: center;
+        flex-flow: wrap;
+        -ms-flex-flow: wrap
+        -webkit-flex-wrap: wrap;
+        margin: 1%;
+      }
+      .developer-card {
+        width: 329px;
+	      height: 515px;
+	      border-radius: 30px;
+	      background-color: #ffffff;
+	      box-shadow: 0 2px 44px 10px rgba(0, 0, 0, 0.04);
+        margin: 0px 0.7% 10px;
+        padding: 18px 18px 0px;
+      }
+      [class*="developer-avatar"] {
+        width: 60px;
+      	height: 60px;
+      	box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.07);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 30px;
+      }
+      .developer-avatar-harris {
+        background-image: url('assets/img/harris.png');
+      }
+      .developer-avatar-ahielan {
+        background-image: url('assets/img/aki.png');
+      }
+      .developer-avatar-seeni {
+        background-image: url('assets/img/seeni.png');
+      }
+      .developer-avatar-thilak {
+        background-image: url('assets/img/thilak.png');
+      }
+      .developer-name {
+        font-family: HelveticaNeue;
+        letter-spacing: 0;
+        text-align: left;
+        padding-top: 10px;
+        margin-left: 27px;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+      }
+      .developer-name div:first-child {
+        height: 22px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+      }
+      .developer-name div:last-child {
+        height: 18px;
+        opacity: 0.6;
+        font-size: 16px;
+        color: #040404;
+      }
+      .developer-stack {
+        margin-top: 20px;
+      }
+      .developer-stack .progress {
+        margin-bottom: 10px;
+        height: 30px;
+	      border-radius: 10px;
+	      background-color: #f7f7f7;
+        box-shadow: none;
+      }
+      .developer-stack .progress-bar {
+      	opacity: 1;
+      	border-radius: 10px;
+      	background-image:  linear-gradient(to right, #eeeeee, #d6d6d6);
+        box-shadow: none;
+      }
+      .developer-stack .stack-name {
+      	font-family: HelveticaNeue;
+      	font-size: 15px;
+      	font-weight: bold;
+      	letter-spacing: 0;
+      	text-align: left;
+      	color: #000000;
+        padding: 6px 0px 6px 16px;
+      }
+      .developer-experience {
+        margin-top: 45px;
+      }
+      .developer-experience div {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: HelveticaNeue;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-align: left;
+        color: #000000;
+      }
+      .developer-profile {
+        margin-top: 35px;
+      }
+      .developer-social {
+        margin: 0px 35px;
+        opacity: 0.2;
+      }
+      .developer-social:hover {
+        opacity: 1;
+      }
+      .workitem-header {
+        margin-top: 110px;
+        font-family: Merriweather;
+        font-size: 56px;
+        font-weight: bold;
+        letter-spacing: 0.1px;
+        text-align: center;
+        color: #000000;
+      }
+      .workitem-description {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        width: 50%;
+        margin: 26px auto 155px;
+        font-family: HelveticaNeue;
+        font-size: 16px;
+        line-height: 1.44;
+        letter-spacing: 0;
+        text-align: center;
+        color: #000000;
+      }
+      .workitem-content {
+        position: relative;
+        background-image: linear-gradient(326deg, rgba(118, 75, 162, 0.0), #667eea);
+      }
+      .workitem-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top: 300px solid #fff;
+        border-left: 1440px solid #667eea;
+      }
+      .workitem-video-container {
+        top: -86px;
+        position: relative;
+        padding: 0px 60px;
+      }
+      .workitem-video-container iframe {
+        border-radius: 20px;
+      }
+      .timeline ul {
+        padding: 50px 0;
+      }
+      .timeline ul li {
+        list-style-type: none;
+        position: relative;
+        width: 2px;
+        margin: 0 auto;
+        padding-top: 50px;
+        background: #fff;
+      }
+      .timeline ul li::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 62%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: inherit;
+      }
+      .timeline ul li div {
+        position: relative;
+        bottom: 0;
+        width: 400px;
+        padding: 2px 15px 0px 15px;
+        text-align: left;
+      	color: #000000;
+      	text-shadow: 0 2px 24px rgba(0, 0, 0, 0.11);
+        letter-spacing: 0;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+      }
+      .content-title {
+      	font-family: Merriweather;
+      	font-size: 26px;
+      	font-weight: bold;
+      }
+      .content-description {
+        opacity: 0.8;
+      	font-family: HelveticaNeue;
+      	font-size: 16px;
+      	line-height: 1.44;
+      }
+      .timeline ul li:nth-child(even) div {
+        left: -220px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-content">
+      <div>
+        <p class="meet-the-team">
+          Meet the team.
+        </p>
+      </div>
+      <div>
+        <p class="passionate-about-tec">
+          Passionate about technology.
+        </p>
+      </div>
+    </div>
+    <div class="developer-section">
+      <div class="developer-card">
+        <div class="content-inline">
+          <div class="developer-avatar-harris">
+          </div>
+          <div class="developer-name">
+            <div>Harris Jose</div>
+            <div>Front-end Developer</div>
+          </div>
+        </div>
+        <div class="developer-stack">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 90%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Ember Js</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">HTML</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">CSS</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 88%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Javascript</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Node Js</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 60%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Java</div>
+            </div>
+          </div>
+        </div>
+        <div class="developer-experience content-inline">
+          <div style="margin-top: 3px; font-size: 15px;">
+            Experience
+          </div>
+          <hr class="horizontal-line">
+          <div style="font-size: 22px;">
+            2yrs
+          </div>
+        </div>
+        <div class="developer-profile content-inline">
+          <div class="developer-social">
+            <a href="https://github.com/harrisjose" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+                <path d="M23.162 6.126a12.304 12.304 0 0 0-4.517-4.476C16.743.55 14.665 0 12.415 0s-4.33.55-6.232 1.65a12.303 12.303 0 0 0-4.518 4.476C.555 8.01 0 10.07 0 12.3c0 2.68.79 5.09 2.368 7.232 1.58 2.14 3.618 3.622 6.118 4.444.29.054.506.016.646-.112a.624.624 0 0 0 .21-.48l-.008-.865a141.74 141.74 0 0 1-.008-1.426l-.372.064a4.785 4.785 0 0 1-.897.056 6.896 6.896 0 0 1-1.123-.112 2.52 2.52 0 0 1-1.083-.48c-.333-.25-.57-.58-.71-.985l-.162-.37a3.996 3.996 0 0 0-.51-.816c-.23-.298-.465-.5-.702-.607l-.113-.08a1.183 1.183 0 0 1-.21-.193.878.878 0 0 1-.146-.224c-.032-.075-.005-.136.08-.185.087-.047.243-.07.47-.07l.323.048c.216.043.482.17.8.384.318.214.58.49.784.833.248.438.547.77.897 1 .35.23.704.345 1.06.345.355 0 .662-.027.92-.08.26-.053.502-.133.728-.24.097-.716.36-1.266.792-1.65a11.16 11.16 0 0 1-1.656-.288 6.63 6.63 0 0 1-1.52-.625 4.342 4.342 0 0 1-1.3-1.073c-.346-.427-.63-.988-.85-1.682-.22-.694-.33-1.495-.33-2.402 0-1.293.425-2.392 1.276-3.3-.398-.972-.36-2.06.113-3.267.313-.096.776-.024 1.39.216.615.24 1.064.445 1.35.616.286.17.515.315.687.432a11.576 11.576 0 0 1 3.104-.416c1.066 0 2.1.14 3.103.416l.614-.384c.42-.256.917-.49 1.488-.705.57-.214 1.008-.273 1.31-.177.485 1.207.528 2.296.13 3.267.85.908 1.276 2.008 1.276 3.3 0 .907-.11 1.71-.33 2.41-.222.7-.507 1.26-.858 1.682a4.51 4.51 0 0 1-1.31 1.065 6.643 6.643 0 0 1-1.52.625c-.49.128-1.04.224-1.655.288.56.48.84 1.24.84 2.274v3.38c0 .192.068.352.203.48s.348.165.64.112c2.5-.822 4.54-2.304 6.117-4.445 1.578-2.14 2.368-4.55 2.368-7.23 0-2.23-.556-4.29-1.666-6.174z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="developer-social">
+            <a href="https://github.com/harrisjose">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path d="M6.212 9H1.388A.384.384 0 0 0 1 9.38v15.24c0 .21.174.38.388.38h4.824c.214 0 .388-.17.388-.38V9.38A.384.384 0 0 0 6.212 9zm-2.01-8A3.204 3.204 0 0 0 1 4.2c0 1.764 1.436 3.2 3.2 3.2a3.203 3.203 0 0 0 3.2-3.2C7.4 2.434 5.965 1 4.2 1zm14.554 7.2c-1.962 0-3.413.84-4.293 1.794V8.98a.392.392 0 0 0-.392-.39H9.393A.392.392 0 0 0 9 8.98v15.63c0 .216.176.39.392.39h4.875a.392.392 0 0 0 .393-.39v-7.733c0-2.606.71-3.62 2.534-3.62 1.987 0 2.145 1.626 2.145 3.754v7.6c0 .216.174.39.39.39h4.878a.392.392 0 0 0 .392-.39v-8.573c0-3.875-.742-7.836-6.244-7.836z"/>
+              </svg>
+            </div>
+            </a>
+          <div class="developer-social">
+            <a href="https://github.com/harrisjose">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path fill="#010002" d="M25.667 4.485c-.945.42-1.96.707-3.024.835a5.32 5.32 0 0 0 2.315-2.932 10.57 10.57 0 0 1-3.346 1.287A5.233 5.233 0 0 0 17.77 2c-2.91 0-5.266 2.375-5.266 5.302 0 .415.046.82.136 1.21-4.375-.223-8.255-2.334-10.852-5.543a5.292 5.292 0 0 0-.712 2.665c0 1.84.93 3.464 2.342 4.413a5.237 5.237 0 0 1-2.385-.665v.066a5.3 5.3 0 0 0 4.223 5.2c-.44.12-.906.185-1.387.185-.34 0-.67-.034-.993-.098.67 2.108 2.615 3.64 4.918 3.683a10.516 10.516 0 0 1-6.54 2.267c-.424 0-.843-.026-1.255-.073A14.806 14.806 0 0 0 8.07 23c9.686 0 14.98-8.08 14.98-15.09l-.017-.685a10.556 10.556 0 0 0 2.634-2.74z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card">
+        <div class="content-inline">
+          <div class="developer-avatar-ahielan">
+          </div>
+          <div class="developer-name">
+            <div>Ahielan Ravichandran</div>
+            <div>Front-end Developer</div>
+          </div>
+        </div>
+        <div class="developer-stack">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 90%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Ember Js</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">HTML</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">CSS</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 88%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Javascript</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Node Js</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 60%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Java</div>
+            </div>
+          </div>
+        </div>
+        <div class="developer-experience content-inline">
+          <div style="margin-top: 3px; font-size: 15px;">
+            Experience
+          </div>
+          <hr class="horizontal-line">
+          <div style="font-size: 22px;">
+            2yrs
+          </div>
+        </div>
+        <div class="developer-profile content-inline">
+          <div class="developer-social">
+            <a href="https://github.com/ahielanravichandran/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+                <path d="M23.162 6.126a12.304 12.304 0 0 0-4.517-4.476C16.743.55 14.665 0 12.415 0s-4.33.55-6.232 1.65a12.303 12.303 0 0 0-4.518 4.476C.555 8.01 0 10.07 0 12.3c0 2.68.79 5.09 2.368 7.232 1.58 2.14 3.618 3.622 6.118 4.444.29.054.506.016.646-.112a.624.624 0 0 0 .21-.48l-.008-.865a141.74 141.74 0 0 1-.008-1.426l-.372.064a4.785 4.785 0 0 1-.897.056 6.896 6.896 0 0 1-1.123-.112 2.52 2.52 0 0 1-1.083-.48c-.333-.25-.57-.58-.71-.985l-.162-.37a3.996 3.996 0 0 0-.51-.816c-.23-.298-.465-.5-.702-.607l-.113-.08a1.183 1.183 0 0 1-.21-.193.878.878 0 0 1-.146-.224c-.032-.075-.005-.136.08-.185.087-.047.243-.07.47-.07l.323.048c.216.043.482.17.8.384.318.214.58.49.784.833.248.438.547.77.897 1 .35.23.704.345 1.06.345.355 0 .662-.027.92-.08.26-.053.502-.133.728-.24.097-.716.36-1.266.792-1.65a11.16 11.16 0 0 1-1.656-.288 6.63 6.63 0 0 1-1.52-.625 4.342 4.342 0 0 1-1.3-1.073c-.346-.427-.63-.988-.85-1.682-.22-.694-.33-1.495-.33-2.402 0-1.293.425-2.392 1.276-3.3-.398-.972-.36-2.06.113-3.267.313-.096.776-.024 1.39.216.615.24 1.064.445 1.35.616.286.17.515.315.687.432a11.576 11.576 0 0 1 3.104-.416c1.066 0 2.1.14 3.103.416l.614-.384c.42-.256.917-.49 1.488-.705.57-.214 1.008-.273 1.31-.177.485 1.207.528 2.296.13 3.267.85.908 1.276 2.008 1.276 3.3 0 .907-.11 1.71-.33 2.41-.222.7-.507 1.26-.858 1.682a4.51 4.51 0 0 1-1.31 1.065 6.643 6.643 0 0 1-1.52.625c-.49.128-1.04.224-1.655.288.56.48.84 1.24.84 2.274v3.38c0 .192.068.352.203.48s.348.165.64.112c2.5-.822 4.54-2.304 6.117-4.445 1.578-2.14 2.368-4.55 2.368-7.23 0-2.23-.556-4.29-1.666-6.174z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="developer-social">
+            <a href="https://www.linkedin.com/in/ahielan-ravichandran-628921145/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path d="M6.212 9H1.388A.384.384 0 0 0 1 9.38v15.24c0 .21.174.38.388.38h4.824c.214 0 .388-.17.388-.38V9.38A.384.384 0 0 0 6.212 9zm-2.01-8A3.204 3.204 0 0 0 1 4.2c0 1.764 1.436 3.2 3.2 3.2a3.203 3.203 0 0 0 3.2-3.2C7.4 2.434 5.965 1 4.2 1zm14.554 7.2c-1.962 0-3.413.84-4.293 1.794V8.98a.392.392 0 0 0-.392-.39H9.393A.392.392 0 0 0 9 8.98v15.63c0 .216.176.39.392.39h4.875a.392.392 0 0 0 .393-.39v-7.733c0-2.606.71-3.62 2.534-3.62 1.987 0 2.145 1.626 2.145 3.754v7.6c0 .216.174.39.39.39h4.878a.392.392 0 0 0 .392-.39v-8.573c0-3.875-.742-7.836-6.244-7.836z"/>
+              </svg>
+            </div>
+            </a>
+          <div class="developer-social">
+            <a href="https://twitter.com/AhielanR">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path fill="#010002" d="M25.667 4.485c-.945.42-1.96.707-3.024.835a5.32 5.32 0 0 0 2.315-2.932 10.57 10.57 0 0 1-3.346 1.287A5.233 5.233 0 0 0 17.77 2c-2.91 0-5.266 2.375-5.266 5.302 0 .415.046.82.136 1.21-4.375-.223-8.255-2.334-10.852-5.543a5.292 5.292 0 0 0-.712 2.665c0 1.84.93 3.464 2.342 4.413a5.237 5.237 0 0 1-2.385-.665v.066a5.3 5.3 0 0 0 4.223 5.2c-.44.12-.906.185-1.387.185-.34 0-.67-.034-.993-.098.67 2.108 2.615 3.64 4.918 3.683a10.516 10.516 0 0 1-6.54 2.267c-.424 0-.843-.026-1.255-.073A14.806 14.806 0 0 0 8.07 23c9.686 0 14.98-8.08 14.98-15.09l-.017-.685a10.556 10.556 0 0 0 2.634-2.74z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card">
+        <div class="content-inline">
+          <div class="developer-avatar-seeni">
+          </div>
+          <div class="developer-name">
+            <div>Seeni Mohamed</div>
+            <div>Back-end Developer</div>
+          </div>
+        </div>
+        <div class="developer-stack">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 90%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Ember Js</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">HTML</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">CSS</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 88%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Javascript</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Node Js</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 60%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Java</div>
+            </div>
+          </div>
+        </div>
+        <div class="developer-experience content-inline">
+          <div style="margin-top: 3px; font-size: 15px;">
+            Experience
+          </div>
+          <hr class="horizontal-line">
+          <div style="font-size: 22px;">
+            4yrs
+          </div>
+        </div>
+        <div class="developer-profile content-inline">
+          <div class="developer-social">
+            <a href="https://github.com/harrisjose" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+                <path d="M23.162 6.126a12.304 12.304 0 0 0-4.517-4.476C16.743.55 14.665 0 12.415 0s-4.33.55-6.232 1.65a12.303 12.303 0 0 0-4.518 4.476C.555 8.01 0 10.07 0 12.3c0 2.68.79 5.09 2.368 7.232 1.58 2.14 3.618 3.622 6.118 4.444.29.054.506.016.646-.112a.624.624 0 0 0 .21-.48l-.008-.865a141.74 141.74 0 0 1-.008-1.426l-.372.064a4.785 4.785 0 0 1-.897.056 6.896 6.896 0 0 1-1.123-.112 2.52 2.52 0 0 1-1.083-.48c-.333-.25-.57-.58-.71-.985l-.162-.37a3.996 3.996 0 0 0-.51-.816c-.23-.298-.465-.5-.702-.607l-.113-.08a1.183 1.183 0 0 1-.21-.193.878.878 0 0 1-.146-.224c-.032-.075-.005-.136.08-.185.087-.047.243-.07.47-.07l.323.048c.216.043.482.17.8.384.318.214.58.49.784.833.248.438.547.77.897 1 .35.23.704.345 1.06.345.355 0 .662-.027.92-.08.26-.053.502-.133.728-.24.097-.716.36-1.266.792-1.65a11.16 11.16 0 0 1-1.656-.288 6.63 6.63 0 0 1-1.52-.625 4.342 4.342 0 0 1-1.3-1.073c-.346-.427-.63-.988-.85-1.682-.22-.694-.33-1.495-.33-2.402 0-1.293.425-2.392 1.276-3.3-.398-.972-.36-2.06.113-3.267.313-.096.776-.024 1.39.216.615.24 1.064.445 1.35.616.286.17.515.315.687.432a11.576 11.576 0 0 1 3.104-.416c1.066 0 2.1.14 3.103.416l.614-.384c.42-.256.917-.49 1.488-.705.57-.214 1.008-.273 1.31-.177.485 1.207.528 2.296.13 3.267.85.908 1.276 2.008 1.276 3.3 0 .907-.11 1.71-.33 2.41-.222.7-.507 1.26-.858 1.682a4.51 4.51 0 0 1-1.31 1.065 6.643 6.643 0 0 1-1.52.625c-.49.128-1.04.224-1.655.288.56.48.84 1.24.84 2.274v3.38c0 .192.068.352.203.48s.348.165.64.112c2.5-.822 4.54-2.304 6.117-4.445 1.578-2.14 2.368-4.55 2.368-7.23 0-2.23-.556-4.29-1.666-6.174z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="developer-social">
+            <a href="https://github.com/harrisjose">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path d="M6.212 9H1.388A.384.384 0 0 0 1 9.38v15.24c0 .21.174.38.388.38h4.824c.214 0 .388-.17.388-.38V9.38A.384.384 0 0 0 6.212 9zm-2.01-8A3.204 3.204 0 0 0 1 4.2c0 1.764 1.436 3.2 3.2 3.2a3.203 3.203 0 0 0 3.2-3.2C7.4 2.434 5.965 1 4.2 1zm14.554 7.2c-1.962 0-3.413.84-4.293 1.794V8.98a.392.392 0 0 0-.392-.39H9.393A.392.392 0 0 0 9 8.98v15.63c0 .216.176.39.392.39h4.875a.392.392 0 0 0 .393-.39v-7.733c0-2.606.71-3.62 2.534-3.62 1.987 0 2.145 1.626 2.145 3.754v7.6c0 .216.174.39.39.39h4.878a.392.392 0 0 0 .392-.39v-8.573c0-3.875-.742-7.836-6.244-7.836z"/>
+              </svg>
+            </div>
+            </a>
+          <div class="developer-social">
+            <a href="https://github.com/harrisjose">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path fill="#010002" d="M25.667 4.485c-.945.42-1.96.707-3.024.835a5.32 5.32 0 0 0 2.315-2.932 10.57 10.57 0 0 1-3.346 1.287A5.233 5.233 0 0 0 17.77 2c-2.91 0-5.266 2.375-5.266 5.302 0 .415.046.82.136 1.21-4.375-.223-8.255-2.334-10.852-5.543a5.292 5.292 0 0 0-.712 2.665c0 1.84.93 3.464 2.342 4.413a5.237 5.237 0 0 1-2.385-.665v.066a5.3 5.3 0 0 0 4.223 5.2c-.44.12-.906.185-1.387.185-.34 0-.67-.034-.993-.098.67 2.108 2.615 3.64 4.918 3.683a10.516 10.516 0 0 1-6.54 2.267c-.424 0-.843-.026-1.255-.073A14.806 14.806 0 0 0 8.07 23c9.686 0 14.98-8.08 14.98-15.09l-.017-.685a10.556 10.556 0 0 0 2.634-2.74z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="developer-card">
+        <div class="content-inline">
+          <div class="developer-avatar-thilak">
+          </div>
+          <div class="developer-name">
+            <div>Thilakeswar D</div>
+            <div>Back-end Developer</div>
+          </div>
+        </div>
+        <div class="developer-stack">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 90%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Ember Js</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">HTML</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">CSS</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 88%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Javascript</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Node Js</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 60%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Java</div>
+            </div>
+          </div>
+        </div>
+        <div class="developer-experience content-inline">
+          <div style="margin-top: 3px; font-size: 15px;">
+            Experience
+          </div>
+          <hr class="horizontal-line">
+          <div style="font-size: 22px;">
+            2yrs
+          </div>
+        </div>
+        <div class="developer-profile content-inline">
+          <div class="developer-social">
+            <a href="https://github.com/Thilakeswar" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+                <path d="M23.162 6.126a12.304 12.304 0 0 0-4.517-4.476C16.743.55 14.665 0 12.415 0s-4.33.55-6.232 1.65a12.303 12.303 0 0 0-4.518 4.476C.555 8.01 0 10.07 0 12.3c0 2.68.79 5.09 2.368 7.232 1.58 2.14 3.618 3.622 6.118 4.444.29.054.506.016.646-.112a.624.624 0 0 0 .21-.48l-.008-.865a141.74 141.74 0 0 1-.008-1.426l-.372.064a4.785 4.785 0 0 1-.897.056 6.896 6.896 0 0 1-1.123-.112 2.52 2.52 0 0 1-1.083-.48c-.333-.25-.57-.58-.71-.985l-.162-.37a3.996 3.996 0 0 0-.51-.816c-.23-.298-.465-.5-.702-.607l-.113-.08a1.183 1.183 0 0 1-.21-.193.878.878 0 0 1-.146-.224c-.032-.075-.005-.136.08-.185.087-.047.243-.07.47-.07l.323.048c.216.043.482.17.8.384.318.214.58.49.784.833.248.438.547.77.897 1 .35.23.704.345 1.06.345.355 0 .662-.027.92-.08.26-.053.502-.133.728-.24.097-.716.36-1.266.792-1.65a11.16 11.16 0 0 1-1.656-.288 6.63 6.63 0 0 1-1.52-.625 4.342 4.342 0 0 1-1.3-1.073c-.346-.427-.63-.988-.85-1.682-.22-.694-.33-1.495-.33-2.402 0-1.293.425-2.392 1.276-3.3-.398-.972-.36-2.06.113-3.267.313-.096.776-.024 1.39.216.615.24 1.064.445 1.35.616.286.17.515.315.687.432a11.576 11.576 0 0 1 3.104-.416c1.066 0 2.1.14 3.103.416l.614-.384c.42-.256.917-.49 1.488-.705.57-.214 1.008-.273 1.31-.177.485 1.207.528 2.296.13 3.267.85.908 1.276 2.008 1.276 3.3 0 .907-.11 1.71-.33 2.41-.222.7-.507 1.26-.858 1.682a4.51 4.51 0 0 1-1.31 1.065 6.643 6.643 0 0 1-1.52.625c-.49.128-1.04.224-1.655.288.56.48.84 1.24.84 2.274v3.38c0 .192.068.352.203.48s.348.165.64.112c2.5-.822 4.54-2.304 6.117-4.445 1.578-2.14 2.368-4.55 2.368-7.23 0-2.23-.556-4.29-1.666-6.174z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="developer-social">
+            <a href="https://www.linkedin.com/in/thilakeswar-dhanasekaran-14aa51a1/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path d="M6.212 9H1.388A.384.384 0 0 0 1 9.38v15.24c0 .21.174.38.388.38h4.824c.214 0 .388-.17.388-.38V9.38A.384.384 0 0 0 6.212 9zm-2.01-8A3.204 3.204 0 0 0 1 4.2c0 1.764 1.436 3.2 3.2 3.2a3.203 3.203 0 0 0 3.2-3.2C7.4 2.434 5.965 1 4.2 1zm14.554 7.2c-1.962 0-3.413.84-4.293 1.794V8.98a.392.392 0 0 0-.392-.39H9.393A.392.392 0 0 0 9 8.98v15.63c0 .216.176.39.392.39h4.875a.392.392 0 0 0 .393-.39v-7.733c0-2.606.71-3.62 2.534-3.62 1.987 0 2.145 1.626 2.145 3.754v7.6c0 .216.174.39.39.39h4.878a.392.392 0 0 0 .392-.39v-8.573c0-3.875-.742-7.836-6.244-7.836z"/>
+              </svg>
+            </div>
+            </a>
+          <div class="developer-social">
+            <a href="https://twitter.com/ThilakBuddy">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path fill="#010002" d="M25.667 4.485c-.945.42-1.96.707-3.024.835a5.32 5.32 0 0 0 2.315-2.932 10.57 10.57 0 0 1-3.346 1.287A5.233 5.233 0 0 0 17.77 2c-2.91 0-5.266 2.375-5.266 5.302 0 .415.046.82.136 1.21-4.375-.223-8.255-2.334-10.852-5.543a5.292 5.292 0 0 0-.712 2.665c0 1.84.93 3.464 2.342 4.413a5.237 5.237 0 0 1-2.385-.665v.066a5.3 5.3 0 0 0 4.223 5.2c-.44.12-.906.185-1.387.185-.34 0-.67-.034-.993-.098.67 2.108 2.615 3.64 4.918 3.683a10.516 10.516 0 0 1-6.54 2.267c-.424 0-.843-.026-1.255-.073A14.806 14.806 0 0 0 8.07 23c9.686 0 14.98-8.08 14.98-15.09l-.017-.685a10.556 10.556 0 0 0 2.634-2.74z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="workitem-header">
+      Works
+    </div>
+    <div class="workitem-description">
+      Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+    </div>
+    <div class="workitem-content">
+      <div class="workitem-video-container">
+        <iframe width="1344" height="653" src="https://www.youtube.com/embed/fxNTEE990ac" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="timeline">
+        <ul>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="content-title">Slack Integration</div>
+              <div class="content-description">
+                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
