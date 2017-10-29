@@ -196,7 +196,7 @@
       .workitem-video-container {
         top: -86px;
         position: relative;
-        padding: 0px 60px;
+        margin: 0px 60px;
         text-align: center;
       }
       .workitem-video-container iframe {
@@ -229,7 +229,7 @@
         position: relative;
         bottom: 0;
         width: 400px;
-        padding: 2px 15px 0px 15px;
+        padding: 10px 15px 0px 15px;
         text-align: left;
       	color: #000000;
       	text-shadow: 0 2px 24px rgba(0, 0, 0, 0.11);
@@ -265,6 +265,27 @@
       	text-align: center;
       	color: #000000;
       	text-shadow: 0 2px 24px rgba(0, 0, 0, 0.11);
+      }
+      /* Media Queries */
+      @media screen and (max-width: 830px) {
+        .timeline ul li {
+          width: auto;
+          background: inherit;
+        }
+        .timeline ul li div {
+          position: static;
+          text-align: center;
+          width: auto;
+        }
+        .timeline ul li:nth-child(even) div {
+          text-align: center;
+        }
+        .content-title {
+          font-size: 26px;
+        }
+        .content-description {
+          font-size: 14px;
+        }
       }
     </style>
   </head>
@@ -511,32 +532,32 @@
         <div class="developer-stack">
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 90%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
-              <div class="stack-name">Ember Js</div>
+              <div class="stack-name">Java</div>
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" role="progressbar" style="width: 95%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">MySQL</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 85%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
               <div class="stack-name">HTML</div>
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 92%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" role="progressbar" style="width: 85%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
               <div class="stack-name">CSS</div>
             </div>
           </div>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 88%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" role="progressbar" style="width: 90%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="stack-name">Shell Scripting</div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 65%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
               <div class="stack-name">Javascript</div>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 80%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
-              <div class="stack-name">Node Js</div>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 60%; height: 30px;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
-              <div class="stack-name">Java</div>
             </div>
           </div>
         </div>
@@ -582,7 +603,7 @@
     </div>
     <div class="workitem-content">
       <div class="workitem-video-container">
-        <iframe width="1099" height="534" src="<iframe width="560" height="315" src="https://www.youtube.com/embed/Xee5ol8h1nM" frameborder="0" allowfullscreen></iframe>" frameborder="0" gesture="media" allowfullscreen></iframe>
+        <iframe width="80%" height="534" src="https://www.youtube.com/embed/Xee5ol8h1nM" frameborder="0" gesture="media" allowfullscreen></iframe>
       </div>
       <div class="timeline">
         <ul>
@@ -590,79 +611,79 @@
             <div>
               <div class="content-title">Slack Integration</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                The Zoho Subscriptions - Slack integration allows you to easily monitor your customers’ subscription payment activities. The notifications will be triggered based on payment actions and will be pushed into your Slack channels instantly.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">MailChimp Integration</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                MailChimp integration helps you to associate a MailChimp mailing list with a payment page inside Zoho Checkout.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">Cliq Integration</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                Zoho Cliq helps you stay connected and collaborate with teams at your workplace. With Cliq and Subscriptions integrated, you will receive notifications related to subscriptions and payments. Notifications will be pushed to the cliq channel mentioned while setting up the integration.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">Square Integration</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                The Square integration in our products help our customers to collect their clients’ payments via credit cards.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">Apple pay Integration</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                The Apple Pay integration in our products help our customers make checkout flows faster and more secure by using TouchID and Apple Wallet. The integration is done via Stripe Connect and the payments are routed through the stripe merchant account.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">Import and Export</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                Import and Export features allows customers to import and export their data in various formats. This also helps customers switch over to Zoho with ease.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">User and roles</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                User and roles feature allows our customers to bring in their colleagues within their organization as Users and provide them with a role based access. For example, you could invite your salesperson to the organization and give access to specific modules like customers or invoices.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">Policy Optimization</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                Policy optimization helps in finding anomalies in firewall rulesets. It also gives suggestions to mitigate the issues in firewall and boost up performance. Suggestion are based on rule reordering, rule deleting and so on.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">Sentiment Analysis</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                Sentiment analysis is a classical classification problem to find the sentiment for the given content. We can find the sentiment score and to the extend we can add further levels to sentiment range.
               </div>
             </div>
           </li>
           <li>
             <div>
-              <div class="content-title">Slack Integration</div>
+              <div class="content-title">Keyword Extraction</div>
               <div class="content-description">
-                Audio player software is used to play back sound recordings in one of the many formats available for computers today. It can also play back music CDs. There is audio player software that is native to the computer’s operating system.
+                Tired of reading the whole content all the time? Keyword extraction is tasked with the automatic identification of terms that best describe the subject of a document.
               </div>
             </div>
           </li>
@@ -670,7 +691,7 @@
       </div>
     </div>
     <div class="footer-content">
-      Audio player software is used to play back sound recordings in one of the many formats available for computers today.
+      Teamwork divides the task and multiplies the success.
     </div>
     <div style="height: 32px; background-image: linear-gradient(95deg, #304352, #d7d2cc);"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
